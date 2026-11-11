@@ -59,3 +59,13 @@ Use this skill before creating, moving, renaming or reviewing files. Follow the 
 - Before writing a helper, search `src/shared` and `src/hooks`; a domain-free helper goes to `src/shared` from its first use, not as a private copy beside a component.
 - A new backend read or write is a new `src/data-access/<operation>/` folder, never a `fetch` written inside a component.
 - Tests live in a `__tests__` folder beside the code they test.
+
+## Exceptions
+
+<!-- TEMPLATE: list deliberate departures from the rules above, so they are neither "fixed" nor copied. Delete the section while it is empty. -->
+
+| File | Departure | Reason |
+| --- | --- | --- |
+| <path> | <the rule it breaks> | <why it stays that way> |
+
+A listed exception stays as it is and never serves as a pattern for new code. A new exception is agreed with the developer and added here with its reason.
