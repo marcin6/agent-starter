@@ -18,6 +18,8 @@ AGENTS.md                      main instructions template (to fill in)
   frontend-design/             TEMPLATE: UI rules + slots for theme and components
   next-best-practices/         Next.js documentation (generalized intro)
   writing-for-agents/          how to write and trim AGENTS.md and skills
+  feature-spec/                spec and step-by-step plan for a larger change (edge cases, rollout, progress across sessions)
+  pull-request/                user-invoked: push the branch and open a PR with the description template
   grilling/                    stress-testing a plan, round by round
   prototype/                   throwaway prototypes (logic / UI variants)
   improve-codebase-architecture/  finding refactors that deepen modules
@@ -44,8 +46,9 @@ If your tool doesn't read `AGENTS.md` (plain Claude Code reads `CLAUDE.md`), cre
    - "Code conventions": these are the default conventions (`I`/`T` prefixes, named exports, a single destructured object as the argument, `async`/`await`). Change them before the first line of code, then stick to them.
    - "Checks", "Deployment", "Git": the real script names, hosting and branches.
 2. **`file-organization`**: adapt the tables to the project. The backend has placeholders only. Once there is code, put in real examples.
-3. **`frontend-design`**: fill in "Building blocks" (the components in `src/ui` and their props) and "Look" (font, palette in the Tailwind config, button shape, images). In an empty project, settle the theme first, because the first screens set the pattern for the rest.
-4. Delete the skills you don't need. Every model-invoked skill has a description that sits in context all the time.
+3. **`file-organization` → "Exceptions"**: list deliberate departures from the layout as they appear, or delete the empty section.
+4. **`frontend-design`**: fill in "Building blocks" (the components in `src/ui` and their props) and "Look" (font, palette in the Tailwind config, button shape, images). In an empty project, settle the theme first, because the first screens set the pattern for the rest.
+5. Delete the skills you don't need. Every model-invoked skill has a description that sits in context all the time.
 
 ## Starter principles
 
@@ -79,6 +82,8 @@ AGENTS.md                      szablon głównych instrukcji (do uzupełnienia)
   frontend-design/             SZABLON: zasady UI + miejsca na motyw i komponenty
   next-best-practices/         dokumentacja Next.js (wstęp uogólniony)
   writing-for-agents/          jak pisać i przycinać AGENTS.md i skille
+  feature-spec/                spec i plan krok po kroku dla większej zmiany (przypadki brzegowe, wdrożenie, postęp między sesjami)
+  pull-request/                wywoływany ręcznie: push gałęzi i PR z szablonem opisu
   grilling/                    przepytywanie z planu, runda po rundzie
   prototype/                   prototypy do wyrzucenia (logika / warianty UI)
   improve-codebase-architecture/  szukanie refaktorów pogłębiających moduły
@@ -105,8 +110,9 @@ Jeśli Twoje narzędzie nie czyta `AGENTS.md` (zwykły Claude Code czyta `CLAUDE
    - „Code conventions”: to domyślne konwencje (prefiksy `I`/`T`, named exports, jeden destrukturyzowany obiekt jako argument, `async`/`await`). Zmień je przed pierwszą linią kodu, potem się ich trzymaj.
    - „Checks”, „Deployment”, „Git”: prawdziwe nazwy skryptów, hosting i gałęzie.
 2. **`file-organization`**: dopasuj tabele do projektu. Backend ma same placeholdery. Gdy pojawi się kod, wpisz prawdziwe przykłady.
-3. **`frontend-design`**: uzupełnij „Building blocks” (komponenty z `src/ui` i ich propsy) oraz „Look” (font, paleta w configu Tailwinda, kształt przycisków, obrazki). W pustym projekcie najpierw ustal motyw, bo pierwsze ekrany wyznaczają wzorzec dla kolejnych.
-4. Usuń skille, których nie potrzebujesz. Każdy model-invoked skill ma opis, który cały czas siedzi w kontekście.
+3. **`file-organization` → „Exceptions”**: wpisuj świadome odstępstwa od układu, gdy się pojawią, albo usuń pustą sekcję.
+4. **`frontend-design`**: uzupełnij „Building blocks” (komponenty z `src/ui` i ich propsy) oraz „Look” (font, paleta w configu Tailwinda, kształt przycisków, obrazki). W pustym projekcie najpierw ustal motyw, bo pierwsze ekrany wyznaczają wzorzec dla kolejnych.
+5. Usuń skille, których nie potrzebujesz. Każdy model-invoked skill ma opis, który cały czas siedzi w kontekście.
 
 ## Założenia startera
 

@@ -9,7 +9,7 @@ Deliver the smallest complete change that satisfies the request and keeps every 
 
 ## Establish the change
 
-1. Read `AGENTS.md`, then the issue or request (`gh issue view` when an issue is linked).
+1. Read `AGENTS.md`, then the issue, spec or request (`gh issue view` when an issue is linked; `feature-spec` when the change has a spec).
 2. Check the branch and working tree. Preserve unrelated user changes.
 3. Read the current implementation, its callers and the closest working example: the neighbouring page, component, data-access operation or backend controller.
 4. Read `file-organization` for placement and `frontend-design` for UI changes. Consult `next-best-practices` only for the Next.js decisions the change involves, against the installed version.
@@ -48,5 +48,7 @@ If the app or a test mode cannot run, report that gap; never call unverified beh
 ## Finish
 
 Review the final diff with `code-review`, including new files. Fix material findings and repeat the affected checks.
+
+When the change makes `AGENTS.md`, a skill or a spec describe something that is no longer true (a path, a flow, a command, a "change together" list), update that text in the same change.
 
 Report what changed, the patterns reused, any exception, the checks run with their results, and remaining gaps. Commit, push or open a pull request only when the developer asks.

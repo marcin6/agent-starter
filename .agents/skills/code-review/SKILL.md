@@ -53,6 +53,8 @@ Apply every item of "Risk areas" and "Security and configuration" in `AGENTS.md`
 - an amount sent to a payment provider computed from the request body, wrong rounding to minor units, wrong currency;
 - a secret in a `NEXT_PUBLIC_` variable, in frontend code, in a committed `.env` file, or in a log line or error response;
 - personal data logged or exposed through a public endpoint; a new endpoint without input validation or with more public access than needed;
+- a record read or changed by an ID from the request without checking that it belongs to the current user or that their role allows it;
+- user input inserted into HTML without escaping (`dangerouslySetInnerHTML`, HTML e-mail templates, strings built into markup);
 - a schema change without its matching fetch and validator changes, a "change together" list from `AGENTS.md` left incomplete, edits to generated files, an unstated effect on production data;
 - a changed shape of persisted client state that breaks data users already have; storage read during server render;
 - a form submitted twice, an error the user never sees, a missing success or failure path;
